@@ -14,7 +14,7 @@ width="$(stty size | cut -d" " -f2)"
 line=""
 a=1
 echo "\n"
-for i in {1..100}
+for i in {1..1}
 do
 	line=""
 	for i in $( eval echo {1..$width} )
@@ -163,7 +163,21 @@ sleep 0.06
 echo -n "        \/         \/        \/        \/        \/         \/  "
 echo "$spaces"
 
+echo " "
+echo " "
+sleep 0.2
+echo "IN QUESTA PROVA DOVRETE TROVARE LA PASSWORD "
+sleep 0.2
+echo "Premi un tasto qualsiasi per accedere al menu'..."
+while [ true ] ; do
+read -t 3 -n 1
+if [ $? = 0 ] ; then
+./menu.zsh
 exit ;
+else
+echo "waiting for the keypress"
+fi
+done
 else
 echo "waiting for the keypress"
 fi
