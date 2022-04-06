@@ -29,13 +29,13 @@ read comando
 
 if [ "$comando" = "p" ]
 then
-  ./password.zsh
+  zsh password.zsh
 elif [ "$comando" = "d" ]
 then
   zsh decodificatore.zsh
 elif [ "$comando" = "i" ]
 then
-  ./infoRadio.zsh
+  zsh infoRadio.zsh
 else
   
   echo "comando non valido!"
