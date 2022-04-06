@@ -22,16 +22,16 @@
      \ V  V / (_| | |   <| |  __/ || (_| | |   <| |  __/ 
       \_/\_/ \__,_|_|_|\_\_|\___|\__\__,_|_|_|\_\_|\___| 
 
-                        COME COMUNICARE?
-                       ==================
-
-                    CB = squadra campo base
-                    A  = squadra operativa
-
-Per aprire la comunicazione dire due volte il nome di chi state 
-contattando e poi il vostro.
-Chi risponde ad un tentativo di comunicazione dice "AVANTI" e il nome di 
-chi lo contatta.
+                        COME COMUNICARE?                                
+                       ==================                               
+                                                                        
+                    CB = squadra campo base                             
+                    A  = squadra operativa                              
+                                                                        
+Per aprire la comunicazione dire due volte il nome di chi state         
+contattando e poi il vostro.                                            
+Chi risponde ad un tentativo di comunicazione dice "AVANTI" e il nome di
+chi lo contatta.                                                        
 I seguenti sacmbi di informazioni vengono conclusi con la parola "PASSO"
 Chi ha aperto la comunicazione la conclude con "PASSO E CHIUDO"
 

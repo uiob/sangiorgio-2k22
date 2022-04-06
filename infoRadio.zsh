@@ -9,9 +9,6 @@ do
   spaces4="${spaces4} "
 done
 
-echo "Inserisci password.... "
-read pw
-
 while IFS= read -r line; 
 do
     echo -n "$spaces4"
@@ -19,3 +16,14 @@ do
     echo "$spaces4"
     sleep 0.1
 done < walkietalkie.txt
+
+echo "Premi un tasto qualsiasi per tornare al menu'..."
+while [ true ] ; do
+read -t 3 -n 1
+if [ $? = 0 ] ; then
+	zsh menu.zsh
+exit ;
+else
+echo "waiting for the keypress"
+fi
+done
