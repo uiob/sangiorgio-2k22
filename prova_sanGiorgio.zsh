@@ -23,11 +23,7 @@ do
 		line="$line$newchar"
 	done
 	echo -n $line
-
-	#if [[ "$a" == '2' ]]; then
-    #break
-  	#fi
-	sleep 0.02 #bohforseno
+	sleep 0.02
 done
 
 
@@ -172,7 +168,7 @@ echo "Premi un tasto qualsiasi per accedere al menu'..."
 while [ true ] ; do
 read -t 3 -n 1
 if [ $? = 0 ] ; then
-./menu.zsh
+	zsh menu.zsh
 exit ;
 else
 echo "waiting for the keypress"

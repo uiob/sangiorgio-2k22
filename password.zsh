@@ -1,27 +1,30 @@
 clear 
-read -p "Inserisci password.... " pw
+width4="$(stty size | cut -d" " -f3)"
+
+numspace4=$(($width4-71))
+numspace4=$(($numspace4/2))
+
+for k in $(eval echo "{1..$numspace4}")
+do
+  spaces4="${spaces4} "
+done
+
+echo "Inserisci password.... "
+read pw
 
 if [ "$pw" = "pw1" ]
 then
-    echo "
-
-____________________ ____________   _________                        
-\______   \______   \\_____  \   \ /   /  _  \                       
- |     ___/|       _/ /   |   \   Y   /  /_\  \                      
- |    |    |    |   \/    |    \     /    |    \                     
- |____|    |____|_  /\_______  /\___/\____|__  /                     
-                  \/         \/              \/                      
-  _____________ __________________________________________________    
- /   _____/    |   \______   \_   _____/\______   \__    ___/  _  \    
- \_____  \|    |   /|     ___/|    __)_  |       _/ |    | /  /_\  \   
- /        \    |  / |    |    |        \ |    |   \ |    |/    |    \  
-/_______  /______/  |____|   /_______  / |____|_  / |____|\____|__  /   
-        \/                           \/         \/                \/   
-
-"
+while IFS= read -r line; 
+do
+    echo -n "$spaces4"
+    echo -n "$line"
+    echo "$spaces4"
+    sleep 0.1
+done < provasuperata.txt
     exit ;
 else 
     echo "PASSWORD ERRATA!"
-    ./menu.zsh
+    sleep 3
+    zsh menu.zsh
 fi
 
