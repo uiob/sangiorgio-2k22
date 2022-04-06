@@ -24,4 +24,3 @@ else
     echo "PASSWORD ERRATA!"
     ./menu.zsh
 fi
-
