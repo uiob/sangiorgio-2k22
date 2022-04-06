@@ -27,4 +27,3 @@ else
     sleep 3
     zsh menu.zsh
 fi
-
