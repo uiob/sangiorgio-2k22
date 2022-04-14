@@ -1,27 +1,27 @@
-                                               . 
-                  .              .   .'.     \   / 
-                \   /      .'. .' '.'   '  -=  o  =- 
-              -=  o  =-  .'   '              / | \ 
-                / | \                          | 
-                  |                            | 
-                  |                            | 
-                  |                      .=====| 
-                  |=====.                |.---.| 
-                  |.---.|                ||=o=|| 
-                  ||=o=||                ||   || 
-                  ||   ||                ||   || 
-                  ||   ||                ||___|| 
-                  ||___||                |[:::]| 
-                  |[:::]|                '-----' 
-                  '-----' 
-
-                   _ _    _      _        _ _    _       
-                  | | |  (_)    | |      | | |  (_)      
-    __      ____ _| | | ___  ___| |_ __ _| | | ___  ___  
-    \ \ /\ / / _` | | |/ / |/ _ \ __/ _` | | |/ / |/ _ \ 
-     \ V  V / (_| | |   <| |  __/ || (_| | |   <| |  __/ 
-      \_/\_/ \__,_|_|_|\_\_|\___|\__\__,_|_|_|\_\_|\___| 
-
+                                               .                        
+                  .              .   .'.     \   /                      
+                \   /      .'. .' '.'   '  -=  o  =-                    
+              -=  o  =-  .'   '              / | \                      
+                / | \                          |                        
+                  |                            |                        
+                  |                            |                        
+                  |                      .=====|                        
+                  |=====.                |.---.|                        
+                  |.---.|                ||=o=||                        
+                  ||=o=||                ||   ||                        
+                  ||   ||                ||   ||                        
+                  ||   ||                ||___||                        
+                  ||___||                |[:::]|                        
+                  |[:::]|                '-----'                        
+                  '-----'                                               
+                                                                        
+                   _ _    _      _        _ _    _                      
+                  | | |  (_)    | |      | | |  (_)                     
+    __      ____ _| | | ___  ___| |_ __ _| | | ___  ___                 
+    \ \ /\ / / _` | | |/ / |/ _ \ __/ _` | | |/ / |/ _ \                
+     \ V  V / (_| | |   <| |  __/ || (_| | |   <| |  __/                
+      \_/\_/ \__,_|_|_|\_\_|\___|\__\__,_|_|_|\_\_|\___|                
+                                                                        
                         COME COMUNICARE?                                
                        ==================                               
                                                                         
@@ -33,21 +33,21 @@ contattando e poi il vostro.
 Chi risponde ad un tentativo di comunicazione dice "AVANTI" e il nome di
 chi lo contatta.                                                        
 I seguenti sacmbi di informazioni vengono conclusi con la parola "PASSO"
-Chi ha aperto la comunicazione la conclude con "PASSO E CHIUDO"
-
-esempio 1:
- CB:    "squadra operativa - squadra operativa - 
-        campo base"
-  A:    "AVANTI campo base"
- CB:    "bla bla bla - PASSO"
-  A:    "RICEVUTO - PASSO"
- CB:    "PASSO E CHIUDO"
-
- esempio 2:
-  A:    "campo base - campo base - 
-        squadra operativa"
- CB:    "AVANTI squadra operativa"
-  A:    "bla bla bla - PASSO"
- CB:    "RICEVUTO - PASSO"
-  A:    "PASSO E CHIUDO"
-                                                    
+Chi ha aperto la comunicazione la conclude con "PASSO E CHIUDO"         
+                                                                        
+esempio 1:                                                              
+ CB:    "squadra operativa - squadra operativa -                        
+        campo base"                                                     
+  A:    "AVANTI campo base"                                             
+ CB:    "bla bla bla - PASSO"                                           
+  A:    "RICEVUTO - PASSO"                                              
+ CB:    "PASSO E CHIUDO"                                                
+                                                                        
+ esempio 2:                                                             
+  A:    "campo base - campo base -                                      
+        squadra operativa"                                              
+ CB:    "AVANTI squadra operativa"                                      
+  A:    "bla bla bla - PASSO"                                           
+ CB:    "RICEVUTO - PASSO"                                              
+  A:    "PASSO E CHIUDO"                                                
+                                                                        
