@@ -1,22 +1,9 @@
 clear
 
-width2="$(stty size | cut -d" " -f2)"
+source printAsciiArt.zsh
 
-numspace2=$(($width2-69))
-numspace2=$(($numspace2/2))
+printAscii menu.txt
 
-for j in $(eval echo "{1..$numspace2}")
-do
-  spaces2="${spaces2} "
-done
-
-while IFS= read -r line; 
-do
-    echo -n "$spaces2"
-    echo -n "$line"
-    echo "$spaces2"
-    sleep 0.1
-done < menu.txt
 echo "- i --> per info su come comunicare con le radio"
 sleep 0.4
 echo "- p --> per inserire la password e VINCERE la prova."
