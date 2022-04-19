@@ -3,15 +3,27 @@ clear
 
 source printAsciiArt.zsh
 
-echo "Inserisci password.... "
+echo -n "Inserisci password.... "
 read pw
+
+sleep 1
+echo ""
 
 if [ "$pw" = "pw1" ]
 then
+    clear
     printAscii ./../txt/provaSuperata.txt
-    exit ;
+    sleep 9999
 else 
-    echo "PASSWORD ERRATA!"
-    sleep 3
+    echo $'\e[1;31m'PASSWORD ERRATA!$'\e[0m'
+    sleep 1
+    echo -n "\ngoing back to main menu"
+    sleep 1
+    echo -n "."
+    sleep 1
+    echo -n "."
+    sleep 1
+    echo -n "."
+    sleep 1
     zsh menu.zsh
 fi
