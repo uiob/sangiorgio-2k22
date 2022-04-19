@@ -5,53 +5,124 @@ source printAsciiArt.zsh
 
 printAscii ./../txt/decodificatore.txt
 
-
 echo -n "inserisci comando "
 read comando
-
 
 str1=""
 str2=""
 str3=""
 count=0
-while [$i!="\'"]
+while [ "$i" != "'" ] && [ $count -lt 50 ]
 do
 i="${comando:$count:1}"
-str2=${"$str2$1"}
+str1="${str1}$i"
+let count=count+1
 done
 
-echo "$str1"
+# echo "str1= $str1"
 
-# regex="^(echo '){1}\w+(' |){1}( base64| base64 --decode)$"
+i="${comando:$count:1}"
 
-# comando="echo 'ci' | base64"
+while [ "$i" != "'" ] && [ $count -lt 50 ]
+do
+i="${comando:$count:1}"
+str2="${str2}$i"
+let count=count+1
+done
 
-# glob="@(echo ')*+( base64| base64 --decode)"
+# echo "str2= $str2"
 
-# echo "glob = "$glob""
 
-# echo "comando = $comando"
+n1=${#str1}
+n2=${#str2}
+ncmd=${#comando}
 
-if [[ "$comando" == "$glob" ]]
+lw=$(($n1 - 2))
+word=${str2:0:-1}
+# echo "word= $word"
+
+ntot=$(($n1 + $n2))
+
+len=$((ncmd - ntot))
+
+# echo "n1= $n1"
+# echo "n2= $n2"
+# echo "ncmd= $ncmd"
+# echo "len= $len"
+
+i="${comando:$count:1}"
+
+for (( j=0; j<${len}; j++ ));
+do
+i="${comando:$count:1}"
+str3="${str3}$i"
+let count=count+1
+done
+
+# echo "str3= $str3"
+sleep 1
+if [ $count -lt 48 ]
 then
-    echo "comando matchato!"
+
+  if [ "$str1" = "echo '" ]
+  then
+      if [ "$str3" = " | base64" ] || [ "$str3" = " | base64 --decode" ]
+      then
+      echo "\ncomando corretto"
+      sleep 1
+      echo -n "lancio il comando"
+      sleep 1
+      echo -n "."
+      sleep 1
+      echo -n "."
+      sleep 1
+      echo "."
+      sleep 1
+      echo ""
+
+      if [ "$str3" = " | base64" ]
+      then 
+        echo "$word" | base64
+      elif [ "$str3" = " | base64 --decode" ]
+      then
+        echo "$word" | base64 --decode
+        sleep 3
+      
+      else
+      echo $'\e[1;31m'comando non valido$'\e[0m'
+      fi
+  else
+  echo $'\e[1;31m'comando non valido$'\e[0m'
+  fi
 else
-echo "comando non valido"
-sleep 2
+echo $'\e[1;31m'comando non valido$'\e[0m'
 fi
 
-#@(echo \')*@( base64| base64 --decode)
+sleep 1.2
+echo -n "\ndigita menu per tornare al menu, r per provare un'altro comando"
 
-echo -n "digita menu per tornare al menu"
 
-
-echo -n "\n\ninserisci comando: "
-
+echo -n "\ninserisci comando: "
 read input
 
 if [ "$input" = "menu" ]
 then
   zsh menu.zsh
-else
+elif [ "$input" = "r" ]
+then
   zsh decodificatore.zsh
+  fi
+else
+  echo ""
+  echo $'\e[1;31m'comando non valido$'\e[0m'
+  sleep 1
+  echo -n "\ngoing back to main menu"
+  sleep 1
+  echo -n "."
+  sleep 1
+  echo -n "."
+  sleep 1
+  echo -n "."
+  sleep 1
+  zsh menu.zsh
 fi
