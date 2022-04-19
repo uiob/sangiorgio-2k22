@@ -1,8 +1,9 @@
+#!/bin/zsh
 clear 
 
-source printAsciiArt.zsh
+source printNotCentered.zsh
 
-printAscii walkietalkie.txt
+printNotCentered ./../txt/istruzioniDecodificatore.txt
 
 echo "Premi un tasto qualsiasi per tornare al menu'..."
 while [ true ] ; do

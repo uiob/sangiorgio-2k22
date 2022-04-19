@@ -26,7 +26,7 @@ do
 	sleep 0.02
 done
 
-printAscii titoloProva.txt
+printAscii ./../txt/titoloProva.txt
 
 echo "IN QUESTA PROVA DOVRETE TROVARE LA PASSWORD "
 sleep 0.2

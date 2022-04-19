@@ -1,14 +1,17 @@
+#!/bin/zsh
 clear
 
 source printAsciiArt.zsh
 
-printAscii menu.txt
+printAscii ./../txt/menu.txt
 
-echo "- i --> per info su come comunicare con le radio"
+echo "- ir --> per info su come comunicare con le radio"
 sleep 0.4
-echo "- p --> per inserire la password e VINCERE la prova."
+echo "- id --> per info su come usare il decodificatore"
 sleep 0.4
 echo "- d --> per utilizzare il decodificatore"
+sleep 0.4
+echo "- p --> per inserire la password e VINCERE la prova."
 
 # fullname="USER INPUT"
 echo -n "Inserisci comando: " 
@@ -20,9 +23,12 @@ then
 elif [ "$comando" = "d" ]
 then
   zsh decodificatore.zsh
-elif [ "$comando" = "i" ]
+elif [ "$comando" = "ir" ]
 then
   zsh infoRadio.zsh
+  elif [ "$comando" = "id" ]
+then
+  zsh infoDecodificatore.zsh
 else
   
   echo "comando non valido!"

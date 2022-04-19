@@ -1,4 +1,4 @@
- #!/bin/bash
+ #!/bin/zsh
 
  printAscii () {
     firstRow=$(head -n 1 "$1")

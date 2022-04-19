@@ -1,0 +1,16 @@
+istruzioni per decodificare un messaggio in base64
+
+per codificare e decodificare un messaggio codificato con base 64, si utilizza il comando:
+ base64 
+
+di default base64 CODIFICA, se invece volessimo DECODIFICARE, bisogna aggiungere dopo il comando base64 (separando con uno spazio) il flag --decode
+
+bisogna inoltre passare il messaggio codificate, e infine stamparlo (ovvero farlo vedere sul terminale)
+
+per stampare un messaggio si usa:
+ echo 'messaggio' 
+
+se invece vogliamo stampare il messaggio codificato/decodificato, dopo echo 'messaggio' bisogna passare il comandodi codifica/decodifica (inserendeolo dopo il comando di stampa, separando i due comandi con il carattere | )
+
+ad esempio quindi, se volessi codificare il messaggio "ciao a tutti" e stamparlo, dovrei scrivere:
+echo 'ciao a tutti!' | base64

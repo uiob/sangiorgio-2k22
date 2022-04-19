@@ -1,3 +1,4 @@
+#!/bin/zsh
 clear
 width3="$(stty size | cut -d" " -f3)"
 
@@ -19,7 +20,7 @@ do
     echo -n "$line"
     echo "$spaces3"
     sleep 0.1
-done < tree.txt
+done < ./../txt/tree.txt
 
 echo "digita:"
 sleep 0.4
