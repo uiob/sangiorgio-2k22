@@ -1,45 +1,41 @@
 #!/bin/zsh
 clear
-width3="$(stty size | cut -d" " -f3)"
 
-numspace3=$(($width3-67))
-numspace3=$(($numspace3/2))
+source printAsciiArt.zsh
 
-for j in $(eval echo "{1..$numspace3}")
-do
-  spaces3="${spaces3} "
-done
+echo "Per proteggere le informzioni da membri esetrni alla squadra, le coordinate sono protette da un codice"
+sleep 3
+echo "\nInserisci il codice per avere le coordinate"
 
+echo -n "Codice: "
+read codice
 
-echo "complimenti, la squadra operativa e' riuscita a raggiungere l'albero!"
-sleep 1
-
-while IFS= read -r line; 
-do
-    echo -n "$spaces3"
-    echo -n "$line"
-    echo "$spaces3"
-    sleep 0.1
-done < ./../txt/tree.txt
-
-echo "digita:"
-sleep 0.4
-echo "- si -> se la password può essere recuperata"
-sleep 0.4
-echo "- no -> se la password non è raggiungibile"
-sleep 0.4
-
-echo -n "Inserisci comando: " 
-read comando2
-
-if [ "$comando2" = "si" ]
+if [ "$codice" = "codicegiusto" ]
 then
-  zsh password.zsh
-elif [ "$comando2" = "no" ]
+  sleep 0.4
+  echo "\ncodice corretto!"
+  sleep 2
+  zsh infoMateriale.zsh
+elif [ "$codice" = "nondec" ]
 then
-  zsh azimut.zsh
+  echo ""
+  echo $'\e[1;31m'Codice non valido$'\e[0m'
+  sleep 1.5
+  echo "\nIl codice è in un formato non riconosciuto!"
+  sleep 3
 else
-  echo "comando non valido!"
-  sleep 1.2
-  zsh coordinate.zsh
+  echo ""
+  echo $'\e[1;31m'Codice non valido$'\e[0m'
+  sleep 1.5
 fi
+
+    sleep 1
+    echo -n "\ngoing back to main menu"
+    sleep 1
+    echo -n "."
+    sleep 1
+    echo -n "."
+    sleep 1
+    echo -n "."
+    sleep 1
+    zsh menu.zsh
