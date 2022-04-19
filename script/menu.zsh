@@ -11,10 +11,13 @@ echo "- id --> per info su come usare il decodificatore"
 sleep 0.4
 echo "- d --> per utilizzare il decodificatore"
 sleep 0.4
+echo "- c --> per avere le coordinate del punto materiali"
+sleep 0.4
 echo "- p --> per inserire la password e VINCERE la prova."
+sleep 0.4
 
 # fullname="USER INPUT"
-echo -n "Inserisci comando: " 
+echo -n "\nInserisci comando: " 
 read comando
 
 if [ "$comando" = "p" ]
@@ -29,6 +32,10 @@ then
   elif [ "$comando" = "id" ]
 then
   zsh infoDecodificatore.zsh
+elif [ "$comando" = "c" ]
+then
+  zsh coordinate.zsh
+  
 else
   
   echo "comando non valido!"
