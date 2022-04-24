@@ -10,7 +10,7 @@ echo "\nInserisci il codice per avere le coordinate"
 echo -n "Codice: "
 read codice
 
-if [ "$codice" = "inscodice" ]
+if [ "$codice" = "gnu giallo" ]
 then
   sleep 0.4
   echo "\ncodice corretto!"

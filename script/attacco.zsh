@@ -2,7 +2,7 @@
 
 clear
 
-echo "La squadra d'attacco sta venendo attaccata dai velivoli dell? "
+echo "La squadra d'attacco sta venendo attaccata dai velivoli dellgli agenti ombra"
 
 sleep 5
 
