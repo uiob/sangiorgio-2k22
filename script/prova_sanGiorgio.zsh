@@ -2,7 +2,9 @@
 #------------------
 #@file:fscriptSanG.zsh
 #------------------
-source printAsciiArt.zsh
+source ./printAsciiArt.zsh
+
+clear
 
 echo "Press any key to continue"
 while [ true ] ; do
@@ -28,7 +30,7 @@ done
 
 printAscii ./../txt/titoloProva.txt
 
-echo "IN QUESTA PROVA DOVRETE TROVARE LA PASSWORD "
+# decho "IN QUESTA PROVA DOVRETE TROVARE LA PASSWORD "
 sleep 0.2
 echo "Premi un tasto qualsiasi per accedere al menu'..."
 while [ true ] ; do

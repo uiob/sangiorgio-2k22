@@ -9,7 +9,7 @@ read pw
 sleep 1
 echo ""
 
-if [ "$pw" = "pw1" ]
+if [ "$pw" = "inspw" ]
 then
     clear
     printAscii ./../txt/provaSuperata.txt

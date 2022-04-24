@@ -9,16 +9,18 @@ echo "- ir --> per info su come comunicare con le radio"
 sleep 0.4
 echo "- id --> per info su come usare il decodificatore"
 sleep 0.4
-echo "- d --> per utilizzare il decodificatore"
+echo "- d  --> per utilizzare il decodificatore"
 sleep 0.4
-echo "- c --> per avere le coordinate del punto materiali"
+echo "- c  --> per avere le coordinate del punto materiali"
 sleep 0.4
-echo "- p --> per inserire la password e VINCERE la prova."
+echo "- p  --> per inserire la password e VINCERE la prova"
 sleep 0.4
 
 # fullname="USER INPUT"
 echo -n "\nInserisci comando: " 
 read comando
+
+sleep 0.5
 
 if [ "$comando" = "p" ]
 then
@@ -37,9 +39,9 @@ then
   zsh coordinate.zsh
   
 else
-  
-  echo "comando non valido!"
-  sleep 1.2
+  echo ""
+  echo $'\e[1;31m'comando non valido!$'\e[0m'
+  sleep 1.8
   zsh menu.zsh
 fi
 

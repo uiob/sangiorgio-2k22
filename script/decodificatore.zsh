@@ -5,7 +5,7 @@ source printAsciiArt.zsh
 
 printAscii ./../txt/decodificatore.txt
 
-echo -n "inserisci comando "
+echo -n "\n\ninserisci comando di codifica/decodifica: "
 read comando
 
 str1=""
@@ -38,7 +38,6 @@ n2=${#str2}
 ncmd=${#comando}
 
 lw=$(($n1 - 2))
-word=${str2:0:-1}
 # echo "word= $word"
 
 ntot=$(($n1 + $n2))
@@ -63,13 +62,13 @@ done
 sleep 1
 if [ $count -lt 48 ]
 then
-
+  word=${str2:0:-1}
   if [ "$str1" = "echo '" ]
   then
-      if [ "$str3" = " | base64" ] || [ "$str3" = " | base64 --decode" ]
-      then
-      echo "\ncomando corretto"
-      sleep 1
+    if [ "$str3" = " | base64" ] || [ "$str3" = " | base64 --decode" ]
+    then
+      echo "\ncomando corretto!"
+      sleep 2
       echo -n "lancio il comando"
       sleep 1
       echo -n "."
@@ -79,18 +78,21 @@ then
       echo "."
       sleep 1
       echo ""
-
       if [ "$str3" = " | base64" ]
-      then 
+      then
+        echo -n "messaggio codificato: "
         echo "$word" | base64
       elif [ "$str3" = " | base64 --decode" ]
       then
+        echo -n "messaggio decodificato: "
         echo "$word" | base64 --decode
         sleep 3
-      
       else
       echo $'\e[1;31m'comando non valido$'\e[0m'
       fi
+    else
+    echo $'\e[1;31m'comando non valido$'\e[0m'
+    fi
   else
   echo $'\e[1;31m'comando non valido$'\e[0m'
   fi
@@ -111,7 +113,6 @@ then
 elif [ "$input" = "r" ]
 then
   zsh decodificatore.zsh
-  fi
 else
   echo ""
   echo $'\e[1;31m'comando non valido$'\e[0m'

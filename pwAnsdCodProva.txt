@@ -1,0 +1,17 @@
+replace inspw & inscodice
+
+
+SQUADRA1:
+    pw: D34E3sPY
+    codice: lepre verde
+    codice_encoded: bGVwcmUgdmVyZGU=
+
+SQUADRA2:
+    pw: Hod56j6C
+    codice: gnu giallo
+    codice_encoded: Z251IGdpYWxsbw==
+
+SQUADRA3:
+    pw: d76MV62x
+    codice: panda viola
+    codice_encoded: cGFuZGEgdmlvbGE=

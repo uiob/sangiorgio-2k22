@@ -241,6 +241,7 @@ do
 	;;
     q) 
 	echo "Goodbye!"
+  zsh menu.zsh
 	tput cvvis
 	stty echo
 	trap exit ALRM

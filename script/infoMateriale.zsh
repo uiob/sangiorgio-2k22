@@ -10,4 +10,4 @@ echo "\n\n"
 echo -n "\n\nPremi un tasto qualsiasi per tornare al menu'... "
 read tasto
 
-zsh menu.zsh
+zsh attacco.zsh
